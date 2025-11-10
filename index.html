@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+        
+        .server-info {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .image-item {
+            text-align: center;
+        }
+
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .interactive-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .interactive-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .interactive-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0.25rem;
+            transition: background 0.3s ease;
+        }
+
+        .interactive-btn:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+<nav style="background: #f4f4f4; padding: 1rem; text-align: center;">
+    <a href="index.html" style="margin: 0 1rem; text-decoration: none; color: #333;">Home</a>
+    <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #333;">About</a>
+    <a href="contact.html" style="margin: 0 1rem; text-decoration: none; color: #333;">Contact</a>
+</nav>
+    <div class="container">
+        <header>
+            <h1>🎉 Welcome to My HTML Website！</h1>
+            <p class="subtitle">This HTML website is built in a Linux VM</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2>📝 About This Project</h2>
+                <p>This is my first web development project, showcasing:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>HTML5 Semantic Tags</li>
+                    <li>CSS3 Styling</li>
+                    <li>Responsive Web Layout</li>
+                    <li>Linux Environment Deployment</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>🛠 Technology Stack</h2>
+                <div class="features">
+                    <div class="feature-item">
+                        <h3>HTML5</h3>
+                        <p>Web Structure</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>CSS3</h3>
+                        <p>Styling</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Nginx</h3>
+                        <p>Web Server</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Linux</h3>
+                        <p>Operating System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class ="container">
+    <div class="card">
+        <h2>🖼 Image Gallery</h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="images/example1.jpg" alt="Example Image 1" onerror="this.style.display='none'">
+                <p>Beautiful Scenery</p>
+            </div>
+            <div class="image-item">
+                <img src="images/example2.jpg" alt="Example Image 2" onerror="this.style.display='none'">
+                <p>City View</p>
+            </div>
+            <div class="image-item">
+                <img src="images/logo.svg" alt="Website Logo">
+                <p>Our Logo</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Interactive Section after Image Gallery -->
+<div class="container">
+    <div class="card">
+        <h2>🎮 Interactive Features</h2>
+        
+        <div class="interactive-section">
+            <!-- Welcome Button -->
+            <div class="interactive-item">
+                <h3>Welcome Message</h3>
+                <button id="welcome-btn" class="interactive-btn">Say Hello 👋</button>
+            </div>
+            
+            <!-- Counter -->
+            <div class="interactive-item">
+                <h3>Click Counter</h3>
+                <p>Count: <span id="counter">0</span></p>
+                <button id="increment-btn" class="interactive-btn">+1</button>
+                <button id="reset-btn" class="interactive-btn">Reset</button>
+            </div>
+            
+            <!-- Theme Toggle -->
+            <div class="interactive-item">
+                <h3>Theme Switcher</h3>
+                <button id="theme-toggle" class="interactive-btn">🌙 Dark Mode</button>
+            </div>
+            
+            <!-- Random Color -->
+            <div class="interactive-item">
+                <h3>Random Color Generator</h3>
+                <button id="color-btn" class="interactive-btn">Generate Color</button>
+                <div id="color-display" style="width: 100px; height: 100px; margin: 10px auto; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                    #FFFFFF
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="card">
+            <h2>📊 System Information</h2>
+            <div class="server-info">
+                <p><strong>Server Time:</strong> <span id="current-time"></span></p>
+                <p><strong>User Agent:</strong> <span id="user-agent"></span></p>
+                <p><strong>Screen Resolution:</strong> <span id="screen-resolution"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 My First Website | Built in Linux VM Environment</p>
+    </footer>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleString();
+        }
+        
+        // Display user agent information
+        document.getElementById('user-agent').textContent = navigator.userAgent;
+        
+        // Display screen resolution
+        document.getElementById('screen-resolution').textContent = 
+            screen.width + ' × ' + screen.height;
+        
+        // Update time every second
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animation = `fadeInUp 0.6s ease ${index * 0.2}s both`;
+            });
+
+            // Interactive features
+            // Welcome button
+            document.getElementById('welcome-btn').addEventListener('click', function() {
+                alert('Hello! Welcome to my website!');
+            });
+
+            // Counter
+            let count = 0;
+            document.getElementById('increment-btn').addEventListener('click', function() {
+                count++;
+                document.getElementById('counter').textContent = count;
+            });
+            document.getElementById('reset-btn').addEventListener('click', function() {
+                count = 0;
+                document.getElementById('counter').textContent = count;
+            });
+
+            // Theme toggle
+            document.getElementById('theme-toggle').addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+            });
+
+            // Random color generator
+            document.getElementById('color-btn').addEventListener('click', function() {
+                const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                const colorDisplay = document.getElementById('color-display');
+                colorDisplay.style.backgroundColor = randomColor;
+                colorDisplay.textContent = randomColor.toUpperCase();
+                colorDisplay.style.color = getContrastColor(randomColor);
+            });
+
+            function getContrastColor(hexcolor) {
+                const r = parseInt(hexcolor.substr(1,2), 16);
+                const g = parseInt(hexcolor.substr(3,2), 16);
+                const b = parseInt(hexcolor.substr(5,2), 16);
+                const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+                return (yiq >= 128) ? '#000000' : '#FFFFFF';
+            }
+        });
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dark-mode {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
+        }
+
+        .dark-mode .card {
+            background: rgba(52, 73, 94, 0.95);
+            color: #ecf0f1;
+        }
+
+        .dark-mode .card h2 {
+            color: #3498db;
+            border-bottom-color: #3498db;
+        }
+
+        .dark-mode .feature-item,
+        .dark-mode .interactive-item {
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .dark-mode header {
+            background: rgba(52, 73, 94, 0.95);
+            color: #ecf0f1;
+        }
+
+        .dark-mode h1 {
+            color: #ecf0f1;
+        }
+
+        .dark-mode .subtitle {
+            color: #bdc3c7;
+        }
+    </style>
+<script src="js/script.js"></script>
+</body>
+</html>

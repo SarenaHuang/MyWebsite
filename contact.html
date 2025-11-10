@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - 我的網站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我們</a>
+        <a href="contact.html" class="active">聯絡我們</a>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📞 聯絡我們</h1>
+            <p class="subtitle">我們很樂意聽到您的聲音</p>
+        </header>
+
+        <div class="contact-info">
+            <div class="info-card">
+                <h3>📍 地址</h3>
+                <p>台北市信義區信義路五段7號</p>
+            </div>
+            <div class="info-card">
+                <h3>📞 電話</h3>
+                <p>(02) 1234-5678</p>
+            </div>
+            <div class="info-card">
+                <h3>✉️ 郵箱</h3>
+                <p>contact@mywebsite.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>傳送訊息給我們</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">姓名 *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">電子郵件 *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">主題</label>
+                    <select id="subject" name="subject">
+                        <option value="">請選擇主題</option>
+                        <option value="general">一般詢問</option>
+                        <option value="support">技術支援</option>
+                        <option value="feedback">意見回饋</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">訊息 *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">傳送訊息</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 表單提交處理
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感謝您的訊息！我們會盡快回覆您。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
